@@ -25,7 +25,7 @@
     "STORE_NAME": "Urban Device Care",
     "STORE_DOMAIN": "urbandevicecare.co.uk",
     "LOGO_URL": "/logo.svg",
-    "MEDUSA_BACKEND_URL": "http://localhost:9000",
+    "MEDUSA_BACKEND_URL": "https://admin.urbandevicecare.co.uk",
     "MEDUSA_PUBLISHABLE_KEY": "pk_c7904d9e7fcc12a1a42277a4e0e33e3479c9653efeed505bdc70dc442d21b067"
   }
 }
