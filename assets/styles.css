@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap");
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@font-face {
+  font-family: "Rockybilly";
+  src: url("https://fonts.cdnfonts.com/s/114875/Rockybilly.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@theme {
+  --font-serif: "Rockybilly", serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-editorial: "Playfair Display", serif;
+  --font-display: "Oswald", sans-serif;
+}
+
+.fresh-gradient {
+  background-color: rgb(134, 239, 172);
+  background-image: linear-gradient(
+    to right bottom,
+    rgb(219, 234, 254),
+    rgb(187, 247, 208),
+    rgb(254, 249, 195)
+  );
+}
+
+@layer utilities {
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@layer base {
+  a,
+  button,
+  [role="button"] {
+    cursor: pointer !important;
+  }
+}
+
+/* Custom View Transitions */
+::view-transition-old(root) {
+  animation: 150ms cubic-bezier(0.4, 0, 1, 1) both fade-out;
+}
+
+::view-transition-new(root) {
+  animation: 150ms cubic-bezier(0, 0, 0.2, 1) both fade-in;
+  animation-delay: 150ms;
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Global Navigation Loading State */
+body.is-navigating {
+  pointer-events: none !important;
+}
+
+body.is-navigating,
+body.is-navigating * {
+  cursor: wait !important;
+}

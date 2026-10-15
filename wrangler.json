@@ -1,0 +1,28 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "medusa-honojs-storefront",
+  "main": "server.tsx",
+  "compatibility_date": "2024-09-23",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": "./static",
+    "binding": "ASSETS"
+  },
+  "kv_namespaces": [
+    {
+      "binding": "RATINGS_KV",
+      "id": "RATINGS_KV_NAMESPACE_ID"
+    },
+    {
+      "binding": "CACHE_KV",
+      "id": "CACHE_KV_NAMESPACE_ID"
+    }
+  ],
+  "vars": {
+    "STORE_NAME": "Urban Device Care",
+    "STORE_DOMAIN": "urbandevicecare.co.uk",
+    "LOGO_URL": "/logo.svg",
+    "MEDUSA_BACKEND_URL": "http://localhost:9000",
+    "MEDUSA_PUBLISHABLE_KEY": "pk_c7904d9e7fcc12a1a42277a4e0e33e3479c9653efeed505bdc70dc442d21b067"
+  }
+}

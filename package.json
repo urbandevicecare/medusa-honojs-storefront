@@ -1,0 +1,24 @@
+{
+  "name": "medusa-honojs-storefront",
+  "version": "2.0.0",
+  "description": "High-performance MedusaJS storefront migrated to Hono, running seamlessly on Cloudflare Workers, Deno, and Node.",
+  "type": "module",
+  "main": "server.tsx",
+  "scripts": {
+    "dev": "deno task dev",
+    "start": "deno task start",
+    "test": "deno task test",
+    "cf:dev": "wrangler dev",
+    "cf:deploy": "wrangler deploy",
+    "cf:dry-run": "wrangler deploy --dry-run"
+  },
+  "dependencies": {
+    "@medusajs/js-sdk": "2.21.0",
+    "@medusajs/types": "2.21.0",
+    "hono": "^4.6.14",
+    "marked": "^14.1.2"
+  },
+  "devDependencies": {
+    "wrangler": "^3.80.0"
+  }
+}

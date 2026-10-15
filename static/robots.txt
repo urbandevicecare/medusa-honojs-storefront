@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://urbandevicecare.co.uk/sitemap.xml

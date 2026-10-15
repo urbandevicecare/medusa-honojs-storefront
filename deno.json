@@ -1,0 +1,47 @@
+{
+  "lock": false,
+  "nodeModulesDir": "auto",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "hono/jsx"
+  },
+  "imports": {
+    "@/": "./",
+    "hono": "npm:hono@^4.6.14",
+    "hono/*": "npm:hono@^4.6.14/*",
+    "@medusajs/js-sdk": "npm:@medusajs/js-sdk@2.21.0",
+    "@medusajs/types": "npm:@medusajs/types@2.21.0",
+    "@std/assert": "jsr:@std/assert@1",
+    "marked": "npm:marked@^14.1.2"
+  },
+  "exclude": [
+    ".wrangler",
+    "node_modules",
+    ".yarn",
+    ".pnp.cjs",
+    ".pnp.loader.mjs"
+  ],
+  "lint": {
+    "exclude": [
+      ".wrangler",
+      "node_modules",
+      ".yarn",
+      ".pnp.cjs",
+      ".pnp.loader.mjs"
+    ],
+    "rules": {
+      "exclude": [
+        "no-explicit-any",
+        "no-empty"
+      ]
+    }
+  },
+  "tasks": {
+    "dev": "deno run -A --no-check --env --unstable-kv server.tsx",
+    "start": "deno run -A --no-check --env --unstable-kv server.tsx",
+    "test": "deno test -A --unstable-kv tests/",
+    "cf:dev": "yarn wrangler dev",
+    "cf:deploy": "yarn wrangler deploy",
+    "cf:dry-run": "yarn wrangler deploy --dry-run"
+  }
+}

@@ -1,0 +1,22 @@
+node_modules/
+.env
+.env.*
+!.env.example
+.DS_Store
+.wrangler/
+dist/
+
+# Local SQLite / KV databases
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Yarn PnP artifacts
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
