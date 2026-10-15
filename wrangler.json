@@ -4,6 +4,7 @@
   "main": "server.tsx",
   "compatibility_date": "2024-09-23",
   "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
   "assets": {
     "directory": "./static",
     "binding": "ASSETS"
@@ -11,11 +12,13 @@
   "kv_namespaces": [
     {
       "binding": "RATINGS_KV",
-      "id": "RATINGS_KV_NAMESPACE_ID"
+      "id": "ca11d4edfbbc48b19f113e102d5b359e",
+      "preview_id": "1ff88d9fb4854505ab7d0219d3701c2f"
     },
     {
       "binding": "CACHE_KV",
-      "id": "CACHE_KV_NAMESPACE_ID"
+      "id": "f9e16d272579439ba676c0863b014e9a",
+      "preview_id": "5b65ba0f3e304ea88a9781549133118b"
     }
   ],
   "vars": {
